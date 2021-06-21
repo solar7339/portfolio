@@ -1,0 +1,352 @@
+/* 공통 */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.inner {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: 'LotteMartHappyBold', 'Noto Sans KR';
+  font-size: var(--font-tit);
+  text-align: center;
+}
+
+h3 {
+  font-family: 'LotteMartHappyBold', 'Noto Sans KR';
+  font-size: var(--font-middle);
+}
+
+h4 {
+  font-family: 'LotteMartHappyBold', 'Noto Sans KR';
+  font-size: var(--font-work);
+}
+
+p {
+  font-size: var(--font-small);
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  height: 100px;
+  background: var(--gnb-color);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+nav ul {
+  float: right;
+  padding-top: 40px;
+}
+
+nav ul li {
+  display: inline-block;
+  padding-right: 45px;
+}
+
+nav ul li:last-child {
+  padding-right: 0;
+}
+
+nav ul li a {
+  font-family: 'LotteMartHappyBold', 'Noto Sans KR';
+  font-size: 18px;
+}
+
+/* PROFILE */
+.profile {
+  position: relative;
+  width: 1030px;
+  margin: 0 auto;
+}
+
+.profile .inner {
+  width: 660px;
+  padding-top: 120px;
+  margin: 0 auto;
+}
+
+.profile .txt_big {
+  font-family: 'LotteMartHappyBold', 'Noto Sans KR';
+  font-size: var(--font-big);
+}
+
+.profile .txt_big .txt_imoti {
+  color: var(--yellow-color);
+}
+
+.profile .txt_large {
+  font-family: 'LotteMartHappyBold', 'Noto Sans KR';
+  font-size: var(--font-large);
+  padding: 30px 0 50px 0;
+}
+
+.profile .txt_large .tag {
+  color: var(--tag-color);
+}
+
+.profile h1 {
+  font-family: 'LotteMartHappyBold', 'Noto Sans KR';
+  font-size: var(--font-middle);
+  padding-bottom: 20px;
+}
+
+.profile .balloons {
+  position: relative;
+  width: 100%;
+}
+
+.profile img {
+  opacity: 0.7;
+}
+
+.yellow_balloon {
+  position: absolute;
+  top: 118px;
+  left: 40px;
+  animation: balloon_floating 3s infinite alternate;
+}
+
+.green_balloon {
+  position: absolute;
+  top: 431px;
+  left: 113px;
+  animation: balloon_floating 4s infinite alternate;
+}
+
+.red_balloon {
+  position: absolute;
+  top: 347px;
+  right: 229px; 
+  animation: balloon_floating 2s infinite alternate;
+}
+
+.purple_balloon {
+  position: absolute;
+  top: 139px;
+  right: 71px;
+  animation: balloon_floating 5s infinite alternate;
+}
+
+.blue_balloon {
+  position: absolute;
+  top: 480px;
+  right: 11px;
+  animation: balloon_floating 3s infinite alternate;
+}
+
+@keyframes balloon_floating {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+/* ABOUT */
+.about h2 {
+  padding: 155px 0 45px 0;
+}
+
+.about_list {
+  background: url(../img/mint_divider.png) no-repeat center;
+  background-size: 1px 100%;
+}
+
+.about_list::before {
+  content: "";
+  display: block;
+  height: 11px;
+  background: url(../img/circle.png) no-repeat center;
+}
+
+.about_list ul {
+  padding-top: 60px;
+}
+
+.about_list ul:first-child {
+  padding-top: 20px;
+}
+
+.about_list ul li {
+  position: relative;
+  min-height: 80px;
+}
+
+.about_list ul li:first-child {
+  float: left;
+  width: 50%;
+  text-align: right;
+  padding-right: 85px;
+}
+
+.about_list ul li:last-child {
+  float: right;
+  width: 50%;
+  padding-left: 85px;
+}
+
+.about_list .pink::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 80px;
+  background: var(--pink-color);
+  position: absolute;
+  top: 0;
+  right: 50px;
+}
+
+.about_list .green::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 80px;
+  background: var(--green-color);
+  position: absolute;
+  top: 0;
+  left: 50px;
+}
+
+.about_list .pink + .desc {
+  padding-left: 50px;
+}
+
+.about_list ul li:first-child.desc {
+  padding-right: 50px;
+}
+
+/* PORTFOLIO */
+.portfolio h2 {
+  padding: 170px 0 45px 0;
+}
+
+.portfolio h3 {
+  text-align: center;
+}
+
+.main_project img {
+  max-width: 800px;
+}
+
+.main_project .project_desc {
+  float: right;
+  width: 295px;
+  margin-right: 80px;
+  margin-top: 88px;
+}
+
+.main_project .project_desc p {
+  padding: 30px 0;
+}
+
+.main_project .btn_box {
+  font-size: 0;
+}
+
+.main_project .btn_box > a {
+  border: 1px solid var(--text-color);
+  width: calc(100% / 2 - 5px);
+  height: 47px;
+  display: inline-block;
+  text-align: center;
+  line-height: 45px;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.main_project .btn_box > a:last-child {
+  margin-right: 0;
+}
+
+.other_works {
+  padding: 0 20px;
+}
+
+.other_works h3 {
+  padding: 75px 0;
+}
+
+/* .other_works .work_list {
+  border: 1px solid seagreen;
+} */
+
+.other_works .work {
+  width: calc(100% / 4 - 15px);
+  float: left;
+  text-align: center;
+  margin-right: 20px;
+  padding-bottom: 30px;
+}
+
+.other_works .work:nth-child(4n) {
+  margin-right: 0;
+}
+
+.other_works .work .work_img {
+  width: 232px;
+  height: 129px;
+  background: #ccc;
+  margin-bottom: 20px;
+}
+
+.other_works .work p:nth-child(3) {
+  padding: 10px 0;
+}
+
+.other_works .work .work_btn_box {
+  font-size: 0;
+}
+
+.other_works .work .work_btn_box > a {
+  border: 1px solid var(--text-color);
+  width: calc(80% / 2 - 5px);
+  height: 47px;
+  display: inline-block;
+  text-align: center;
+  line-height: 45px;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.other_works .work .work_btn_box > a:last-child {
+  margin-right: 0;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+}
+
+.contact h2 {
+  padding-top: 137px;
+}
+
+.contact .divider {
+  width: 30px;
+  background: var(--tag-color);
+  margin: 30px auto;
+}
+
+/* Footer */
+footer {
+  margin-top: 125px;
+  background: var(--text-color);
+  height: 100px;
+  padding: 40px 0;
+}
+
+footer p {
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
